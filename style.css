@@ -1,0 +1,148 @@
+/* Обнуление */
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Свойства body */
+
+body {
+	height: 100%;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	background-color: #dec476;
+	scroll-behavior: smooth;
+	transition: 300ms;
+	line-height: 1.4;
+}
+
+/* header */
+
+header {
+	height: 24px;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+nav {
+	background-color: #fff;
+}
+
+ul {
+	/* Делаем header горизонтальным */
+	display: flex;
+	/*убираем маркеры*/
+	list-style: none;
+}
+
+li {
+	/*делаем выравнивание*/
+	margin: auto;
+	padding: 15px;
+}
+
+/* li a используется для уточнения именно этих ссылок */
+
+li a {
+	/*делаем ссылки стандартного вида*/
+	color: inherit;
+	text-decoration: none;
+}
+
+/* "анимация"  подчеркивания при наведении (чтобы было понятно, что это ссылки) */
+
+li a:hover {
+	text-decoration: underline;
+}
+
+/* Анимация подчеркивания при наведении 
+
+li a:after {
+	display: block;
+	content: "";
+	border-radius: 10px;
+	background: #252B42;
+	width: 0;
+	height: 1px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	transition: 150ms ease-out;
+}
+
+li a:hover::after {
+	content: '';
+	width: 100%;
+	background-color: #000;
+}
+
+*/
+
+/* main */
+
+main {
+	display: flex;
+	/*центрируем main*/
+	flex-direction: column;
+	margin: 50px auto;
+	max-width: 1024px;
+	padding: 25px 50px;
+	border-radius: 18px;
+	background-color: #fff;
+}
+
+/* центрируем заголовки */
+
+
+h1,
+h3 {
+	text-align: center;
+}
+
+/* добавляем адаптивное изображение */
+
+.img {
+	position: relative;
+	height: 350px;
+	margin-top: 10px;
+}
+
+.img img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	border-radius: 18px;
+}
+
+/* делаем расстояние между блоками */
+
+.block {
+	margin: 15px;
+}
+
+/* делаем расстояние между элеменетами блока */
+
+.block * {
+	margin: 10px;
+}
+
+/* footer */
+
+footer {
+	text-align: center;
+	background-color: #3e4f92;
+	color: #fff;
+	font-size: 24px;
+	font-family: 'Bacasime Antique', serif;
+	padding: 25px 0px;
+	user-select: none;
+}
